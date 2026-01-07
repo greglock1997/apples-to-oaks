@@ -9,7 +9,12 @@ export default function Navbar() {
     return (
         <header className="w-full px-4 md:px-8 py-4 bg-white flex flex-col md:flex-row justify-between md:items-center overflow-hidden">
             <div className="w-full md:w-auto flex justify-between items-center">
-                <h1 className="text-3xl font-bold">Apples To Oaks</h1>
+                <h1 
+                    className="text-3xl font-black"
+                    style={{ fontFamily: "var(--font-playfair), sans-serif" }}
+                >
+                    Apples To Oaks
+                </h1>
                 <button className="flex md:hidden flex-col gap-2" onClick={() => setNavbarOpen(!navbarOpen)}>
                     <div className={`w-8 bg-black h-1 rounded-2xl ${navbarOpen && 'rotate-45 translate-y-3'} transition-all duration-500`}/>
                     <div className={`w-8 bg-black h-1 rounded-2xl ${navbarOpen && 'rotate-45 opacity-0'} transition-all duration-500`}/>

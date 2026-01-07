@@ -1,30 +1,18 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Playfair_Display, Lato } from "next/font/google";
 import "./globals.css";
 import Navbar from "../components/Navbar";
 
-import { Playfair_Display, Inter } from "next/font/google";
-
 const playfair = Playfair_Display({
   subsets: ["latin"],
-  weight: ["400", "700"],
+  weight: ["400", "500", "600", "700", "800", "900"],
   variable: "--font-playfair",
 });
 
-const inter = Inter({
+const lato = Lato({
   subsets: ["latin"],
-  weight: ["400", "600", "700"],
-  variable: "--font-inter",
-});
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  weight: ["400", "700"], // add whatever weights you need
+  variable: "--font-lato",
 });
 
 export const metadata: Metadata = {
@@ -40,7 +28,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${playfair.variable} ${inter.variable} antialiased`}
+        className={`${playfair.variable} ${lato.variable} antialiased`}
+        style={{ fontFamily: "var(--font-lato), sans-serif" }}
       >
         <div className="relative w-full min-h-screen bg-cover bg-center bg-[url('https://images.pexels.com/photos/113338/pexels-photo-113338.jpeg')]">
           {/* <div className="absolute inset-0 bg-black/30" /> */}
