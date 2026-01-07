@@ -1,6 +1,21 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Navbar from "../components/Navbar";
+
+import { Playfair_Display, Inter } from "next/font/google";
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-playfair",
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "600", "700"],
+  variable: "--font-inter",
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,9 +40,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${playfair.variable} ${inter.variable} antialiased`}
       >
-        {children}
+        <div className="relative w-full min-h-screen bg-cover bg-center bg-[url('https://images.pexels.com/photos/113338/pexels-photo-113338.jpeg')]">
+          {/* <div className="absolute inset-0 bg-black/30" /> */}
+          <Navbar/>
+          {children}
+        </div>
       </body>
     </html>
   );
