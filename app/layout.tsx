@@ -36,10 +36,12 @@ export default function RootLayout({
         style={{ fontFamily: "var(--font-lato), sans-serif" }}
       >
         <div className="relative flex flex-col justify-between w-full min-h-screen bg-cover bg-center bg-[url('https://images.pexels.com/photos/113338/pexels-photo-113338.jpeg')]">
-          {/* <div className="absolute inset-0 bg-black/30" /> */}
-          <Navbar/>
-          {children}
-          <Footer/>
+          <div className="absolute inset-0 bg-black/30 backdrop-blur-xs"/>
+          <div className="flex flex-col min-h-screen justify-between z-50">
+            <Navbar/>
+            {children}
+            <Footer/>
+          </div>
         </div>
       </body>
     </html>

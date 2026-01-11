@@ -7,7 +7,7 @@ export default function Navbar() {
     const [navbarOpen, setNavbarOpen] = useState(false);
 
     return (
-        <header className="w-full px-4 md:px-8 py-4 bg-white flex flex-col md:flex-row justify-between md:items-center overflow-hidden">
+        <header className="w-full px-4 md:px-8 py-4 bg-white flex flex-col md:flex-row justify-between md:items-center overflow-hidden shadow-md">
             <div className="w-full md:w-auto flex justify-between items-center">
                 <h1 
                     className="text-3xl font-black"
