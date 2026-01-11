@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import { Playfair_Display, Lato } from "next/font/google";
 import "./globals.css";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { config } from "@fortawesome/fontawesome-svg-core";
+config.autoAddCss = false;
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -31,10 +35,11 @@ export default function RootLayout({
         className={`${playfair.variable} ${lato.variable} antialiased`}
         style={{ fontFamily: "var(--font-lato), sans-serif" }}
       >
-        <div className="relative w-full min-h-screen bg-cover bg-center bg-[url('https://images.pexels.com/photos/113338/pexels-photo-113338.jpeg')]">
+        <div className="relative flex flex-col justify-between w-full min-h-screen bg-cover bg-center bg-[url('https://images.pexels.com/photos/113338/pexels-photo-113338.jpeg')]">
           {/* <div className="absolute inset-0 bg-black/30" /> */}
           <Navbar/>
           {children}
+          <Footer/>
         </div>
       </body>
     </html>
