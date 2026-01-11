@@ -37,7 +37,7 @@ export default function RootLayout({
       >
         <div className="relative flex flex-col justify-between w-full min-h-screen bg-cover bg-center bg-[url('https://images.pexels.com/photos/113338/pexels-photo-113338.jpeg')]">
           <div className="absolute inset-0 bg-black/30 backdrop-blur-xs"/>
-          <div className="flex flex-col min-h-screen justify-between z-50">
+          <div className="flex flex-col min-h-screen justify-between gap-y-20 z-50">
             <Navbar/>
             {children}
             <Footer/>
