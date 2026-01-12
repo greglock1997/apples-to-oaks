@@ -1,11 +1,18 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Lato } from "next/font/google";
+import { Playfair_Display, Lato, Libre_Baskerville } from "next/font/google";
 import "./globals.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 config.autoAddCss = false;
+
+const libre = Libre_Baskerville({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-libre-baskerville",
+});
+
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -32,7 +39,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${playfair.variable} ${lato.variable} antialiased`}
+        className={`${playfair.variable} ${lato.variable} ${libre.variable} antialiased`}
         style={{ fontFamily: "var(--font-lato), sans-serif" }}
       >
         <div className="relative flex flex-col justify-between w-full min-h-screen bg-cover bg-center bg-[url('https://images.pexels.com/photos/113338/pexels-photo-113338.jpeg')]">

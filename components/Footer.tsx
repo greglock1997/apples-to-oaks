@@ -10,13 +10,13 @@ export default function Footer() {
                 <a target="_blank" href='https://x.com/Apples_to_Oaks'>
                     <FontAwesomeIcon 
                         icon={faXTwitter}
-                        className="text-[#13734D] text-[32px] w-[50px] h-[50px]"
+                        className="text-brand text-[32px] w-[50px] h-[50px]"
                     />
                 </a>
                 <a target="_blank" href="https://www.facebook.com/people/Apples-to-Oaks-Tree-Care/100063690846577/#">
                     <FontAwesomeIcon 
                         icon={faFacebook}
-                        className="text-[#13734D] text-[32px] w-[50px] h-[50px]"
+                        className="text-brand text-[32px] w-[50px] h-[50px]"
                     />
                 </a>
                 <a target="_blank" href="https://www.isa-arbor.com/">
